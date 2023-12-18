@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Darryl's Famous Foods</title>
+    <style>
+        body {
+            background-color: #FFFFFF;
+            color: #000000;
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+			min-height: 400px;
+			margin-bottom: 100px;
+			clear: both;
+        }
+
+        header {
+            background-color: #FF0000;
+            color: #FFFFFF;
+            padding: 20px;
+            text-align: center;
+        }
+
+        nav {
+            background-color: #FF0000;
+            color: #FFFFFF;
+            padding: 10px;
+            text-align: center;
+        }
+
+        section {
+            padding: 20px;
+        }
+
+        footer {
+            background-color: #FF0000;
+            color: #FFFFFF;
+            padding: 10px;
+            text-align: center;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+		.menu-item {
+            border: 1px solid #FF0000;
+            border-radius: 5px;
+            padding: 10px;
+            margin: 10px 0;
+            background-color: #FFFFFF;
+        }
+		.view-cart-btn {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            background-color: #FFFFFF;
+            color: #FF0000;
+            border: none;
+            padding: 5px 10px;
+            border-radius: 3px;
+            cursor: pointer;
+            text-decoration: none;
+            font-weight: bold;
+			}
+		.add-to-cart-btn {
+           background-color: #FF0000;
+           color: #FFFFFF;
+           border: none;
+           padding: 5px 10px;
+           border-radius: 3px;
+           cursor: pointer;
+        }
+
+    </style>
+</head>
+
+<body>
+			
+   <h1><a href="index.html" >
+			<img src = "images/logo.png" 
+				width ="125px" height="125px" alt="logo"/>
+				Darryl's Famous Foods
+			</h1>
+
+    <nav>
+	
+	<h4 style = "text-align:left"> 
+	
+		<a href="Specials.html"> Specials |</a> 
+        <a href="Sign In.html">Sign In |</a> 
+        <a href="Contact.html"> Contact |</a>
+		<a href="ViewCart.html" class="view-cart-btn">View Cart</a>
+		
+    </h4> 
+	</nav>
+
+    <section id="menu">
+        <h2>Menu</h2>
+
+        <div class="menu-item" id = "Startah Pack" >
+            <h3>Startah Pack</h3>
+			<img src = "images/Startah pack.png" 
+				width ="125px" height="125px" alt="startah pack"/>
+            <h3>Startah Pack</h3>
+            <p>1 Piece of Chicken + 1 Side </p>
+            <p>Price: $20.00</p>
+            <button class ="add-to-cart-btn">Add to Cart</button>
+        </div>
+
+        <div class="menu-item">
+            <h3>2 Piece Combo</h3>
+			<img src = "images/2Piece Combo.png" 
+				width ="125px" height="125px" alt="2Piece Combo"/>
+            <p>2 Pieces of Chicken + 1 Side + Drink</p>
+			<p>Price: $35.00</p>
+			 <button class="add-to-cart-btn">Add to Cart</button>
+        </div>
+
+        <div class="menu-item">
+            <h3>3 Piece Combo</h3>
+			<img src = "images/3Piece Combo.png" 
+				width ="125px" height="125px" alt="3Piece Combo"/>
+            <p>3 Pieces of Chicken + 1 Side + Drink</p>
+			<p>Price: $45.00</p>
+			<button class="add-to-cart-btn">Add to Cart</button>
+        </div>
+
+
+    </section>
+
+    <footer>
+        <p>&copy; 2023 Darryl's Famous Foods. All rights reserved.</p>
+    </footer>
+	<script>
+        // JavaScript for adding items to the cart
+       function addToCart(itemName, itemPrice) {
+            // Get the c<p>Price: $5.99</p>art container
+            var cartContainer = document.getElementById("cart-items");
+
+            // Create a new cart item element
+            var cartItem = document.createElement("div");
+            cartItem.className = "cart-item";
+            cartItem.innerHTML = "<p><strong>" + itemName + "</strong> - $" + itemPrice.toFixed(2) + "</p>";
+
+            // Append the cart item to the cart container
+            cartContainer.appendChild(cartItem);
+        }
+    </script>
+</body>
+
+</html>
